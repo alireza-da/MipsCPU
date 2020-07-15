@@ -1,4 +1,3 @@
-//Dedicated to Goli
 
 package simulator;
 
