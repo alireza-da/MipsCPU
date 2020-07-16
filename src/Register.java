@@ -25,6 +25,7 @@ public class Register{
 
     public Clock getClock() {
         return clock;
+
     }
 
     public void setFlipFlopsByIndex(int startIndex, int endIndex, int[] data){
