@@ -2,6 +2,7 @@ import simulator.control.Simulator;
 import simulator.gates.sequential.Clock;
 import simulator.gates.sequential.flipflops.DFlipFlop;
 import simulator.gates.sequential.flipflops.FlipFlop;
+import simulator.network.Link;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,17 @@ public class Register{
         return clock;
     }
 
+    public void setFlipFlopsByIndex(int startIndex, int endIndex, int[] data){
+        for (int i=startIndex ; i<endIndex ; i++ ){
+            if (data[i] == 0){
+                getFlipFlops().set(i, new DFlipFlop("d", clock.getOutput(0),Simulator.falseLogic));
+            }
+            else if (data[i] == 1){
+                getFlipFlops().set(i, new DFlipFlop("d", clock.getOutput(0),Simulator.trueLogic));
+            }
+
+        }
+    }
 
     public static void main(String[] args) {
     Register r = new Register();
