@@ -41,4 +41,24 @@ public class Register{
     }
 
 
+    public ArrayList<Link> dataToLogic(){
+        ArrayList<Link> logicalData = new ArrayList<>();
+        for (int i = 0 ; i < 32 ; i++){
+            logicalData.add(getFlipFlops().get(i).getData());
+        }
+        return logicalData;
+    }
+
+    public static void main(String[] args) {
+        Register register = new Register();
+        Clock c = new Clock("c", 1000);
+        for (int j = 0; j < 32; j++) {
+            assert false;
+            DFlipFlop d = new DFlipFlop("d"+ j, c.getOutput(0), Simulator.falseLogic);
+
+            register.getFlipFlops().add(d);
+        }
+        register.dataToLogic();
+    }
+
 }

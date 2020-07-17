@@ -1,5 +1,6 @@
 package simulator.gates.sequential.flipflops;
 
+import simulator.control.Simulator;
 import simulator.network.Link;
 import simulator.network.Node;
 
@@ -26,6 +27,14 @@ public class DFlipFlop extends Node implements FlipFlop {
         memory = getInput(1).getSignal();
     }
 
+    public Link getData(){
+        if (memory){
+            return Simulator.trueLogic;
+        }
+        else
+            return Simulator.falseLogic;
+    }
+
     @Override
     public void evaluate() {
         if(getInput(0).getSignal() && edgeFlag) {
@@ -40,5 +49,9 @@ public class DFlipFlop extends Node implements FlipFlop {
         } else if(!getInput(0).getSignal() && !edgeFlag) {
             edgeFlag = true;
         }
+    }
+
+    public Boolean getMemory() {
+        return memory;
     }
 }
