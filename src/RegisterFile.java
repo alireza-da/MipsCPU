@@ -912,7 +912,10 @@ public class RegisterFile extends Wrapper {
             registerFile.addInput(Simulator.falseLogic);
         }
 
-
+        for (Link link: registerFile.getOutputs()
+             ) {
+            System.out.println(link.getSignal());
+        }
 
     }
 }
