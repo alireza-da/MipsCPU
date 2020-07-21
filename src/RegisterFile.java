@@ -2,6 +2,7 @@ import simulator.control.Simulator;
 import simulator.gates.combinational.And;
 import simulator.gates.combinational.Dec;
 import simulator.gates.combinational.Mux32X1;
+import simulator.gates.sequential.Clock;
 import simulator.gates.sequential.flipflops.DFlipFlop;
 import simulator.network.Link;
 import simulator.wrapper.Wrapper;
@@ -20,11 +21,9 @@ public class RegisterFile extends Wrapper {
             for (int j = 0; j < 32; j++) {
 
                 DFlipFlop d = new DFlipFlop("d"+ j, getInput(0), Simulator.falseLogic);
-
+                //System.out.println(d);
                 r.getFlipFlops().add(d);
             }
-            System.out.println(r.getFlipFlops());
-
             rf.put(i,r);
         }
 
@@ -510,11 +509,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m33.addInput(rf.get(i).dataToLogic().get(0));
         }
-        m33.addInput(getInput(2));
-        m33.addInput(getInput(3));
-        m33.addInput(getInput(4));
-        m33.addInput(getInput(5));
-        m33.addInput(getInput(6));
+        m33.addInput(getInput(7));
+        m33.addInput(getInput(8));
+        m33.addInput(getInput(9));
+        m33.addInput(getInput(10));
+        m33.addInput(getInput(11));
 
         addOutput(m33.getOutput(0)); //read data 2 bit 0
 
@@ -522,11 +521,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m34.addInput(rf.get(i).dataToLogic().get(1));
         }
-        m34.addInput(getInput(2));
-        m34.addInput(getInput(3));
-        m34.addInput(getInput(4));
-        m34.addInput(getInput(5));
-        m34.addInput(getInput(6));
+        m34.addInput(getInput(7));
+        m34.addInput(getInput(8));
+        m34.addInput(getInput(9));
+        m34.addInput(getInput(10));
+        m34.addInput(getInput(11));
 
         addOutput(m34.getOutput(0)); //read data 2 bit 1
 
@@ -534,11 +533,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m35.addInput(rf.get(i).dataToLogic().get(2));
         }
-        m35.addInput(getInput(2));
-        m35.addInput(getInput(3));
-        m35.addInput(getInput(4));
-        m35.addInput(getInput(5));
-        m35.addInput(getInput(6));
+        m35.addInput(getInput(7));
+        m35.addInput(getInput(8));
+        m35.addInput(getInput(9));
+        m35.addInput(getInput(10));
+        m35.addInput(getInput(11));
 
         addOutput(m35.getOutput(0)); //read data 2 bit 2
 
@@ -546,11 +545,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m36.addInput(rf.get(i).dataToLogic().get(3));
         }
-        m36.addInput(getInput(2));
-        m36.addInput(getInput(3));
-        m36.addInput(getInput(4));
-        m36.addInput(getInput(5));
-        m36.addInput(getInput(6));
+        m36.addInput(getInput(7));
+        m36.addInput(getInput(8));
+        m36.addInput(getInput(9));
+        m36.addInput(getInput(10));
+        m36.addInput(getInput(11));
 
         addOutput(m36.getOutput(0)); //read data 2 bit 3
 
@@ -559,11 +558,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m37.addInput(rf.get(i).dataToLogic().get(4));
         }
-        m37.addInput(getInput(2));
-        m37.addInput(getInput(3));
-        m37.addInput(getInput(4));
-        m37.addInput(getInput(5));
-        m37.addInput(getInput(6));
+        m37.addInput(getInput(7));
+        m37.addInput(getInput(8));
+        m37.addInput(getInput(9));
+        m37.addInput(getInput(10));
+        m37.addInput(getInput(11));
 
         addOutput(m37.getOutput(0)); //read data 2 bit 4
 
@@ -571,11 +570,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m38.addInput(rf.get(i).dataToLogic().get(5));
         }
-        m38.addInput(getInput(2));
-        m38.addInput(getInput(3));
-        m38.addInput(getInput(4));
-        m38.addInput(getInput(5));
-        m38.addInput(getInput(6));
+        m38.addInput(getInput(7));
+        m38.addInput(getInput(8));
+        m38.addInput(getInput(9));
+        m38.addInput(getInput(10));
+        m38.addInput(getInput(11));
 
         addOutput(m38.getOutput(0)); //read data 2 bit 5
 
@@ -583,11 +582,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m39.addInput(rf.get(i).dataToLogic().get(6));
         }
-        m39.addInput(getInput(2));
-        m39.addInput(getInput(3));
-        m39.addInput(getInput(4));
-        m39.addInput(getInput(5));
-        m39.addInput(getInput(6));
+        m39.addInput(getInput(7));
+        m39.addInput(getInput(8));
+        m39.addInput(getInput(9));
+        m39.addInput(getInput(10));
+        m39.addInput(getInput(11));
 
         addOutput(m39.getOutput(0)); //read data 2 bit 6
 
@@ -595,11 +594,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m40.addInput(rf.get(i).dataToLogic().get(7));
         }
-        m40.addInput(getInput(2));
-        m40.addInput(getInput(3));
-        m40.addInput(getInput(4));
-        m40.addInput(getInput(5));
-        m40.addInput(getInput(6));
+        m40.addInput(getInput(7));
+        m40.addInput(getInput(8));
+        m40.addInput(getInput(9));
+        m40.addInput(getInput(10));
+        m40.addInput(getInput(11));
 
         addOutput(m40.getOutput(0)); //read data 2 bit 7
 
@@ -607,11 +606,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m41.addInput(rf.get(i).dataToLogic().get(8));
         }
-        m41.addInput(getInput(2));
-        m41.addInput(getInput(3));
-        m41.addInput(getInput(4));
-        m41.addInput(getInput(5));
-        m41.addInput(getInput(6));
+        m41.addInput(getInput(7));
+        m41.addInput(getInput(8));
+        m41.addInput(getInput(9));
+        m41.addInput(getInput(10));
+        m41.addInput(getInput(11));
 
         addOutput(m41.getOutput(0)); //read data 2 bit 8
 
@@ -620,11 +619,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m42.addInput(rf.get(i).dataToLogic().get(9));
         }
-        m42.addInput(getInput(2));
-        m42.addInput(getInput(3));
-        m42.addInput(getInput(4));
-        m42.addInput(getInput(5));
-        m42.addInput(getInput(6));
+        m42.addInput(getInput(7));
+        m42.addInput(getInput(8));
+        m42.addInput(getInput(9));
+        m42.addInput(getInput(10));
+        m42.addInput(getInput(11));
 
         addOutput(m42.getOutput(0)); //read data 2 bit 9
 
@@ -632,11 +631,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m43.addInput(rf.get(i).dataToLogic().get(10));
         }
-        m43.addInput(getInput(2));
-        m43.addInput(getInput(3));
-        m43.addInput(getInput(4));
-        m43.addInput(getInput(5));
-        m43.addInput(getInput(6));
+        m43.addInput(getInput(7));
+        m43.addInput(getInput(8));
+        m43.addInput(getInput(9));
+        m43.addInput(getInput(10));
+        m43.addInput(getInput(11));
 
         addOutput(m43.getOutput(0)); //read data 2 bit 10
 
@@ -644,11 +643,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m44.addInput(rf.get(i).dataToLogic().get(11));
         }
-        m44.addInput(getInput(2));
-        m44.addInput(getInput(3));
-        m44.addInput(getInput(4));
-        m44.addInput(getInput(5));
-        m44.addInput(getInput(6));
+        m44.addInput(getInput(7));
+        m44.addInput(getInput(8));
+        m44.addInput(getInput(9));
+        m44.addInput(getInput(10));
+        m44.addInput(getInput(11));
 
         addOutput(m44.getOutput(0)); //read data 2 bit 11
 
@@ -656,11 +655,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m45.addInput(rf.get(i).dataToLogic().get(12));
         }
-        m45.addInput(getInput(2));
-        m45.addInput(getInput(3));
-        m45.addInput(getInput(4));
-        m45.addInput(getInput(5));
-        m45.addInput(getInput(6));
+        m45.addInput(getInput(7));
+        m45.addInput(getInput(8));
+        m45.addInput(getInput(9));
+        m45.addInput(getInput(10));
+        m45.addInput(getInput(11));
 
         addOutput(m45.getOutput(0)); //read data 2 bit 12
 
@@ -668,11 +667,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m46.addInput(rf.get(i).dataToLogic().get(13));
         }
-        m46.addInput(getInput(2));
-        m46.addInput(getInput(3));
-        m46.addInput(getInput(4));
-        m46.addInput(getInput(5));
-        m46.addInput(getInput(6));
+        m46.addInput(getInput(7));
+        m46.addInput(getInput(8));
+        m46.addInput(getInput(9));
+        m46.addInput(getInput(10));
+        m46.addInput(getInput(11));
 
         addOutput(m46.getOutput(0)); //read data 2 bit 13
 
@@ -680,11 +679,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m47.addInput(rf.get(i).dataToLogic().get(14));
         }
-        m47.addInput(getInput(2));
-        m47.addInput(getInput(3));
-        m47.addInput(getInput(4));
-        m47.addInput(getInput(5));
-        m47.addInput(getInput(6));
+        m47.addInput(getInput(7));
+        m47.addInput(getInput(8));
+        m47.addInput(getInput(9));
+        m47.addInput(getInput(10));
+        m47.addInput(getInput(11));
 
         addOutput(m47.getOutput(0)); //read data 2 bit 14
 
@@ -692,11 +691,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m48.addInput(rf.get(i).dataToLogic().get(15));
         }
-        m48.addInput(getInput(2));
-        m48.addInput(getInput(3));
-        m48.addInput(getInput(4));
-        m48.addInput(getInput(5));
-        m48.addInput(getInput(6));
+        m48.addInput(getInput(7));
+        m48.addInput(getInput(8));
+        m48.addInput(getInput(9));
+        m48.addInput(getInput(10));
+        m48.addInput(getInput(11));
 
         addOutput(m48.getOutput(0)); //read data 2 bit 15
 
@@ -704,11 +703,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m49.addInput(rf.get(i).dataToLogic().get(16));
         }
-        m49.addInput(getInput(2));
-        m49.addInput(getInput(3));
-        m49.addInput(getInput(4));
-        m49.addInput(getInput(5));
-        m49.addInput(getInput(6));
+        m49.addInput(getInput(7));
+        m49.addInput(getInput(8));
+        m49.addInput(getInput(9));
+        m49.addInput(getInput(10));
+        m49.addInput(getInput(11));
 
         addOutput(m49.getOutput(0)); //read data 2 bit 16
 
@@ -716,11 +715,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m50.addInput(rf.get(i).dataToLogic().get(17));
         }
-        m50.addInput(getInput(2));
-        m50.addInput(getInput(3));
-        m50.addInput(getInput(4));
-        m50.addInput(getInput(5));
-        m50.addInput(getInput(6));
+        m50.addInput(getInput(7));
+        m50.addInput(getInput(8));
+        m50.addInput(getInput(9));
+        m50.addInput(getInput(10));
+        m50.addInput(getInput(11));
 
         addOutput(m50.getOutput(0)); //read data 2 bit 17
 
@@ -728,11 +727,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m51.addInput(rf.get(i).dataToLogic().get(18));
         }
-        m51.addInput(getInput(2));
-        m51.addInput(getInput(3));
-        m51.addInput(getInput(4));
-        m51.addInput(getInput(5));
-        m51.addInput(getInput(6));
+        m51.addInput(getInput(7));
+        m51.addInput(getInput(8));
+        m51.addInput(getInput(9));
+        m51.addInput(getInput(10));
+        m51.addInput(getInput(11));
 
         addOutput(m51.getOutput(0)); //read data 2 bit 18
 
@@ -740,11 +739,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m52.addInput(rf.get(i).dataToLogic().get(19));
         }
-        m52.addInput(getInput(2));
-        m52.addInput(getInput(3));
-        m52.addInput(getInput(4));
-        m52.addInput(getInput(5));
-        m52.addInput(getInput(6));
+        m52.addInput(getInput(7));
+        m52.addInput(getInput(8));
+        m52.addInput(getInput(9));
+        m52.addInput(getInput(10));
+        m52.addInput(getInput(11));
 
         addOutput(m52.getOutput(0)); //read data 2 bit 19
 
@@ -752,11 +751,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m53.addInput(rf.get(i).dataToLogic().get(20));
         }
-        m53.addInput(getInput(2));
-        m53.addInput(getInput(3));
-        m53.addInput(getInput(4));
-        m53.addInput(getInput(5));
-        m53.addInput(getInput(6));
+        m53.addInput(getInput(7));
+        m53.addInput(getInput(8));
+        m53.addInput(getInput(9));
+        m53.addInput(getInput(10));
+        m53.addInput(getInput(11));
 
         addOutput(m53.getOutput(0)); //read data 2 bit 20
 
@@ -764,11 +763,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m54.addInput(rf.get(i).dataToLogic().get(21));
         }
-        m54.addInput(getInput(2));
-        m54.addInput(getInput(3));
-        m54.addInput(getInput(4));
-        m54.addInput(getInput(5));
-        m54.addInput(getInput(6));
+        m54.addInput(getInput(7));
+        m54.addInput(getInput(8));
+        m54.addInput(getInput(9));
+        m54.addInput(getInput(10));
+        m54.addInput(getInput(11));
 
         addOutput(m54.getOutput(0)); //read data 2 bit 21
 
@@ -777,11 +776,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m55.addInput(rf.get(i).dataToLogic().get(22));
         }
-        m55.addInput(getInput(2));
-        m55.addInput(getInput(3));
-        m55.addInput(getInput(4));
-        m55.addInput(getInput(5));
-        m55.addInput(getInput(6));
+        m55.addInput(getInput(7));
+        m55.addInput(getInput(8));
+        m55.addInput(getInput(9));
+        m55.addInput(getInput(10));
+        m55.addInput(getInput(11));
 
         addOutput(m55.getOutput(0)); //read data 2 bit 22
 
@@ -789,11 +788,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m56.addInput(rf.get(i).dataToLogic().get(23));
         }
-        m56.addInput(getInput(2));
-        m56.addInput(getInput(3));
-        m56.addInput(getInput(4));
-        m56.addInput(getInput(5));
-        m56.addInput(getInput(6));
+        m56.addInput(getInput(7));
+        m56.addInput(getInput(8));
+        m56.addInput(getInput(9));
+        m56.addInput(getInput(10));
+        m56.addInput(getInput(11));
 
         addOutput(m56.getOutput(0)); //read data 2 bit 23
 
@@ -801,11 +800,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m57.addInput(rf.get(i).dataToLogic().get(24));
         }
-        m57.addInput(getInput(2));
-        m57.addInput(getInput(3));
-        m57.addInput(getInput(4));
-        m57.addInput(getInput(5));
-        m57.addInput(getInput(6));
+        m57.addInput(getInput(7));
+        m57.addInput(getInput(8));
+        m57.addInput(getInput(9));
+        m57.addInput(getInput(10));
+        m57.addInput(getInput(11));
 
         addOutput(m57.getOutput(0)); //read data 2 bit 24
 
@@ -813,11 +812,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m58.addInput(rf.get(i).dataToLogic().get(25));
         }
-        m58.addInput(getInput(2));
-        m58.addInput(getInput(3));
-        m58.addInput(getInput(4));
-        m58.addInput(getInput(5));
-        m58.addInput(getInput(6));
+        m58.addInput(getInput(7));
+        m58.addInput(getInput(8));
+        m58.addInput(getInput(9));
+        m58.addInput(getInput(10));
+        m58.addInput(getInput(11));
 
         addOutput(m58.getOutput(0)); //read data 2 bit 25
 
@@ -825,11 +824,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m59.addInput(rf.get(i).dataToLogic().get(26));
         }
-        m59.addInput(getInput(2));
-        m59.addInput(getInput(3));
-        m59.addInput(getInput(4));
-        m59.addInput(getInput(5));
-        m59.addInput(getInput(6));
+        m59.addInput(getInput(7));
+        m59.addInput(getInput(8));
+        m59.addInput(getInput(9));
+        m59.addInput(getInput(10));
+        m59.addInput(getInput(11));
 
         addOutput(m59.getOutput(0)); //read data 2 bit 26
 
@@ -837,11 +836,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m60.addInput(rf.get(i).dataToLogic().get(27));
         }
-        m60.addInput(getInput(2));
-        m60.addInput(getInput(3));
-        m60.addInput(getInput(4));
-        m60.addInput(getInput(5));
-        m60.addInput(getInput(6));
+        m60.addInput(getInput(7));
+        m60.addInput(getInput(8));
+        m60.addInput(getInput(9));
+        m60.addInput(getInput(10));
+        m60.addInput(getInput(11));
 
         addOutput(m60.getOutput(0)); //read data 2 bit 27
 
@@ -849,11 +848,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m61.addInput(rf.get(i).dataToLogic().get(28));
         }
-        m61.addInput(getInput(2));
-        m61.addInput(getInput(3));
-        m61.addInput(getInput(4));
-        m61.addInput(getInput(5));
-        m61.addInput(getInput(6));
+        m61.addInput(getInput(7));
+        m61.addInput(getInput(8));
+        m61.addInput(getInput(9));
+        m61.addInput(getInput(10));
+        m61.addInput(getInput(11));
 
         addOutput(m61.getOutput(0)); //read data 2 bit 28
 
@@ -861,11 +860,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m62.addInput(rf.get(i).dataToLogic().get(29));
         }
-        m62.addInput(getInput(2));
-        m62.addInput(getInput(3));
-        m62.addInput(getInput(4));
-        m62.addInput(getInput(5));
-        m62.addInput(getInput(6));
+        m62.addInput(getInput(7));
+        m62.addInput(getInput(8));
+        m62.addInput(getInput(9));
+        m62.addInput(getInput(10));
+        m62.addInput(getInput(11));
 
         addOutput(m62.getOutput(0)); //read data 2 bit 29
 
@@ -873,11 +872,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m63.addInput(rf.get(i).dataToLogic().get(30));
         }
-        m63.addInput(getInput(2));
-        m63.addInput(getInput(3));
-        m63.addInput(getInput(4));
-        m63.addInput(getInput(5));
-        m63.addInput(getInput(6));
+        m63.addInput(getInput(7));
+        m63.addInput(getInput(8));
+        m63.addInput(getInput(9));
+        m63.addInput(getInput(10));
+        m63.addInput(getInput(11));
 
         addOutput(m63.getOutput(0)); //read data 2 bit 30
 
@@ -885,11 +884,11 @@ public class RegisterFile extends Wrapper {
         for (int i = 0; i < 32 ; i++) {
             m64.addInput(rf.get(i).dataToLogic().get(31));
         }
-        m64.addInput(getInput(2));
-        m64.addInput(getInput(3));
-        m64.addInput(getInput(4));
-        m64.addInput(getInput(5));
-        m64.addInput(getInput(6));
+        m64.addInput(getInput(7));
+        m64.addInput(getInput(8));
+        m64.addInput(getInput(9));
+        m64.addInput(getInput(10));
+        m64.addInput(getInput(11));
 
         addOutput(m64.getOutput(0)); //read data 2 bit 31
 
@@ -901,5 +900,19 @@ public class RegisterFile extends Wrapper {
 
     public HashMap<Integer, Register> getRf() {
         return rf;
+    }
+
+    public static void main(String[] args) {
+        Clock clock = new Clock("clock",100);//clock cycle 0 , regWrite signal 1 , register read 1(2:6) , 2(7:11) ; register write(12:16) , write data ( 17:48 )
+        RegisterFile registerFile = new RegisterFile("Register File", "49X64", clock.getOutput(0), Simulator.falseLogic
+                , Simulator.falseLogic , Simulator.falseLogic, Simulator.falseLogic, Simulator.falseLogic, Simulator.falseLogic,
+                Simulator.trueLogic , Simulator.falseLogic, Simulator.falseLogic , Simulator.falseLogic, Simulator.falseLogic );
+
+        for (int i = 0; i < 37; i++) {
+            registerFile.addInput(Simulator.falseLogic);
+        }
+
+
+
     }
 }

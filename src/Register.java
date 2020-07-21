@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Register{
     //private Clock clock;
-    private ArrayList<DFlipFlop> flipFlops;
+    private ArrayList<DFlipFlop> flipFlops = new ArrayList<>();
     private Link write = Simulator.falseLogic;
     private Link read = Simulator.falseLogic;
 

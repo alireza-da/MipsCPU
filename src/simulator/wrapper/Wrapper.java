@@ -36,8 +36,8 @@ public abstract class Wrapper implements Linkable {
         outputStream = new DataStream("OUTPUT_STREAM", outputSize);
 
         addInput(links);
+        //initialize();
 
-        initialize();
     }
 
     public abstract void initialize();
