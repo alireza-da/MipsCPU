@@ -49,11 +49,11 @@ public class Register{
     }
 
 
-    public void write(ArrayList<Link> links,Clock clock){
+    public void write(ArrayList<Link> links,Link clock){
         if(write == Simulator.trueLogic){
             int i = 0;
             for (Link link : links) {
-                getFlipFlops().set(i, new DFlipFlop("d" + i, clock.getOutput(0), link));
+                getFlipFlops().set(i, new DFlipFlop("d" + i, clock, link));
             }
         }
     }
