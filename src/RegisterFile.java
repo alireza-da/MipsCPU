@@ -16,6 +16,7 @@ public class RegisterFile extends Wrapper {
     public RegisterFile(String label, String stream, Link... links){
         super(label,stream,links);
         for (int i = 0 ; i < 32 ; i++){
+            rf = new HashMap<>();
             Register r = new Register();
 
             for (int j = 0; j < 32; j++) {
@@ -25,6 +26,7 @@ public class RegisterFile extends Wrapper {
                 r.getFlipFlops().add(d);
             }
             rf.put(i,r);
+            //System.out.println(rf);
         }
 
     }
@@ -68,6 +70,10 @@ public class RegisterFile extends Wrapper {
         And a32 = new And("and32",getInput(1),dec.getOutput(31));
 
         //set write signal of register
+
+        if (rf == null){
+            return;
+        }
         rf.get(0).setWrite(a1.getOutput(0));
         rf.get(1).setWrite(a2.getOutput(0));
         rf.get(2).setWrite(a3.getOutput(0));

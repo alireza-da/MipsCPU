@@ -40,7 +40,8 @@ public abstract class Wrapper implements Linkable {
 
     }
 
-    public abstract void initialize();
+    public  abstract void initialize(
+    );
 
     @Override
     public List<Link> getInputs() {
