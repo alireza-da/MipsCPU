@@ -59,6 +59,13 @@ public class Register{
         }
     }
 
+    public void setClockValue(Link clockValue) {
+        this.clockValue = clockValue;
+    }
+
+    public Link getClockValue() {
+        return clockValue;
+    }
 
     public ArrayList<Link> dataToLogic(){
         ArrayList<Link> logicalData = new ArrayList<>();
