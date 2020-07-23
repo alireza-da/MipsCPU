@@ -119,7 +119,7 @@ public class RegisterFile extends Wrapper {
         }
 
         for (int i = 0; i < 32; i++) {
-            rf.get(i).write(writeData,getInput(0));
+            rf.get(i).write(writeData);
         }
 
         // read data 1

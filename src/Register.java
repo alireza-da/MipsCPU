@@ -11,6 +11,7 @@ public class Register{
     private ArrayList<DFlipFlop> flipFlops = new ArrayList<>();
     private Link write = Simulator.falseLogic;
     private Link read = Simulator.falseLogic;
+    private Link clockValue ;
 
     public Link getRead() {
         return read;
@@ -49,11 +50,11 @@ public class Register{
     }
 
 
-    public void write(ArrayList<Link> links,Link clock){
+    public void write(ArrayList<Link> links){
         if(write == Simulator.trueLogic){
             int i = 0;
             for (Link link : links) {
-                getFlipFlops().set(i, new DFlipFlop("d" + i, clock, link));
+                getFlipFlops().set(i, new DFlipFlop("d" + i, clockValue, link));
             }
         }
     }
@@ -78,5 +79,6 @@ public class Register{
         }
         register.dataToLogic();
     }
+
 
 }
