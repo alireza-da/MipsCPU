@@ -15,7 +15,10 @@ public class RegisterFile extends Wrapper {
     //clock cycle 0 , regWrite signal 1 , register read 1(2:6) , 2(7:11) ; register write(12:16) , write data ( 17:48 )
     public RegisterFile(String label, String stream, Link... links){
         super(label,stream,links);
-        for (int i = 0 ; i < 32 ; i++){
+
+        // paste these after instantiation
+
+        /*for (int i = 0 ; i < 32 ; i++){
             rf = new HashMap<>();
             Register r = new Register();
 
@@ -27,7 +30,7 @@ public class RegisterFile extends Wrapper {
             }
             rf.put(i,r);
             //System.out.println(rf);
-        }
+        }*/
 
     }
 
