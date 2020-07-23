@@ -119,7 +119,7 @@ public class RegisterFile extends Wrapper {
             rf.get(i).write(writeData,getInput(0));
         }
 
-        // read
+        // read data 1
 
         //32 mux (32X1) with register addresses control lines
         Mux32X1 m1 = new Mux32X1("mux1","32X1");
@@ -510,6 +510,7 @@ public class RegisterFile extends Wrapper {
         addOutput(m32.getOutput(0)); //read data 1 bit 31
 
         //--------------------------------------------------------
+        // Read data 2
 
         Mux32X1 m33 = new Mux32X1("mux33","32X1"); // read data 2
         for (int i = 0; i < 32 ; i++) {
